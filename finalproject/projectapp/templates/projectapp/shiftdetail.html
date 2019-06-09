@@ -1,0 +1,12 @@
+{$ extends 'base.html' $}
+{% block content %}
+<h2>{{shift.shiftname}}</h2>
+<h3>Event</h3>
+{% for i in shift %}
+<h4>{{pharmacist.pharmname }}</h4>
+<td>{{technician.techname}}</td>
+<td>{{shift.user}}</td>
+<p>Number of Medication : {{ medicationcount }}</p>
+{% endfor %}
+
+{% endblock %}

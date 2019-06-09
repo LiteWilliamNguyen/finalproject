@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Technician</h2>
+<table class="table">
+<tr>
+    <th>Technician Name</th>
+    <th>Technician Description</th>
+</tr>
+{% for t in technician_list %}
+<tr>
+    <td>{{t.techname}}</td>
+    <td>{{t.techage}}</td>
+    <td>{{t.techwage}}</td>
+    <td>{{t.user}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

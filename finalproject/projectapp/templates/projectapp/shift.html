@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Pharmacist</h2>
+<table class="table">
+<tr>
+    <th>Shift Name</th>
+    <th>Shift Description</th>
+</tr>
+{% for s in pharmacist_list %}
+<tr>
+    <td><a href="{%url 'shiftdetail' id=s.id %}"> {{s.shiftname}}</a></td>
+    <td>{{s.pharname}}</td>
+    <td>{{s.techname}}</td>
+    <td>{{s.user}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
